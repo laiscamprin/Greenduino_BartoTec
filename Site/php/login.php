@@ -1,5 +1,4 @@
 
-
 <?php
 include('../db/conexao_cadastro.php');
 session_start();
@@ -15,15 +14,20 @@ if (isset($_POST['login'])) {
         $dados = mysqli_fetch_assoc($result);
         if (password_verify($senha, $dados['senha'])) {
             $_SESSION['usuario'] = $dados['nome'];
-            header("Location: painel.php");
+            $_SESSION['logado'] = 1; 
+            header("Location: ../public/index.php");
             exit;
         } else {
             $msg = "Senha incorreta.";
+             
         }
     } else {
         $msg = "O usuário não foi encontrado.";
+      
     }
-}
+  }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -32,7 +36,7 @@ if (isset($_POST['login'])) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../css/main.css">
 <link rel="stylesheet" href="../assets/fonts.css">
-<link rel="icon" type="image/x-icon" href="favicon.png">
+<link rel="icon" type="image/x-icon" href="../public/favicon.png">
 <title>Login</title>
 <style>
 /* Reset e base */
@@ -163,25 +167,6 @@ a:hover{
 </head>
 <body>
 
- <header class="barra-navegacao">
-    <div class="container navegacao-conteudo">
-      <div class="logo">
-        <img src="../public/favicon.png" class="logosite" alt="Logo Greenduino">
-        <p class="logotipo">Greenduino</p>
-      </div>
-      <nav>
-        <ul class="links-navegacao">
-          <li><a href="Greenduino/public/index.html">Início</a></li>
-          <li><a href="estufa.php">Estufa</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="contato.html" class="active">Contato</a></li>
-        </ul>
-      </nav>
-      <div class="botoes-usuario">
-      </div>
-    </div>
-  </header>
-  
 <div class="section-login">
 
   <a href="../public/index.html." class="botao-voltar">
@@ -210,3 +195,4 @@ a:hover{
   </div>
 </body>
 </html>
+
