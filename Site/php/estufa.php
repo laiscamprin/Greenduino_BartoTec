@@ -1,5 +1,7 @@
 <?php 
-
+session_start();
+if(isset($_SESSION['logado'])){
+     
 $exibir_tabela = false; 
 $mensagem_erro = "";
 $labels_dh = [];
@@ -100,6 +102,7 @@ $nomeArduino = $resultado['nome_arduino'];
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.2.1"></script> <!-- plugin de anotação -->
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.0"></script> <!-- plugin de zoom e pan -->
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script> <!-- plugin de data labels -->
+    <script src="../js/pages/script.js"></script>
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <title>DashBoard - Estufa</title>
 </head>
@@ -113,8 +116,8 @@ $nomeArduino = $resultado['nome_arduino'];
       </div>
       <nav>
         <ul class="links-navegacao">
-          <li class="anderson"><a href="../public/index.html">Início</a></li>
-          <li class="anderson"><a href="#">Estufa</a></li>
+          <li class="anderson"><a href="../public/index.php">Início</a></li>
+          <li class="anderson"><a href="estufa.php">Estufa</a></li>
           <li class="anderson"><a href="sobre.html">Sobre</a></li>
           <li class="anderson"><a href="contato.html" class="active">Contato</a></li>
         </ul>
@@ -139,6 +142,7 @@ $nomeArduino = $resultado['nome_arduino'];
 
         <div class="div-conteudo"> <!-- [3] início .div-conteudo -->
 
+        <div class="caixa-texto-media">
             <div class="div-img-titulo"> <!-- [4] início .div-img -->
                 <img class="imagem" src="../assets/images/pictures/planta.png" />
                </div> <!--[4] fechamento .div-img -->
@@ -150,7 +154,7 @@ $nomeArduino = $resultado['nome_arduino'];
                     <p>Solo Ideal: 60% - 80%</p>
                     <p>Umidade Ideal: 60% - 70%</p>
                 </div> <!-- [5] fechamento .texto -->
-                
+                </div>
             
             <ul>
                 <p id="dica">Dicas de cuidado:</p>
@@ -313,3 +317,10 @@ $nomeArduino = $resultado['nome_arduino'];
     </main>
 </body>
 </html>
+<?php
+
+} else{
+    header('Location: login.php');
+    exit;
+}
+?>
