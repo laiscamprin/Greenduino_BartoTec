@@ -5,12 +5,27 @@
 
 main {
     font-family: "Quicksand", sans-serif;
-    background: linear-gradient(to center, #abfc99, #fdfff4, #abfc99);
+    background: linear-gradient(to bottom, #abfc99, #fdfff4, #abfc99);
     color: #333;
     padding:20px 100px ;
    
 }
+.links-navegacao {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 10px;
+}
 
+.links-navegacao a {
+  text-decoration: none;
+  color:#333;
+  font-family: "Inconsolata";
+  transition: color 0.3s ease;
+}
+.anderson {
+  font-size:1rem;
+}
 .titulo-voltar{
     display:flex;
     flex-direction: row;
@@ -287,52 +302,165 @@ th {
     text-align:center;
 }
 
-
-/*
-@media (max-width: 768px) {
-    img {
-        float: none;
-        width: 100%;
-        margin-bottom: 15px;
+@media (max-width: 768px) { /* tablets */
+        main {
+            padding: 20px 20px; 
+        }
+    .navegacao-conteudo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        flex-wrap: wrap; 
     }
 
-    #conteudo-planta {
-        width: 100%;
+    .links-navegacao {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
     }
 
-    form {
+    .botoes-usuario {
+       order: 2;
+       margin: 0;
+    }
+
+    h1 {
+        font-size: 1.8em; 
+
+    }
+    #nome-planta{
+        text-align:left;
+        margin:0;
+    }
+    .div-conteudo {
         flex-direction: column;
+        text-align: center;
+    }
+    .caixa-texto-media{
+        display:flex;
+        flex-direction: row;
     }
 
-    form button {
-        flex: 1 1 100%;
+    .imagem {
+        width: 80px; 
+        height: 100px;
+        margin: 0 auto 10px;
     }
 
-    .container-tabela-grafico {
-        flex-direction: column; 
+    .texto {
+        margin:10px;
+        text-align: left;
+    }
+    #dica{
+        text-align: left;
+    }
+    li{
+        text-align: left;
+    }
+    .secao-form form {
+        display: flex; /* Muda de grid para flex vertical */
+        flex-direction: column;
+        padding: 10px 15px;
+    }
+    .titulo-voltar{
+        display:flex;
+        flex-direction: row;
+        justify-content:left;
+    }
+    .botao-voltar{
+        margin:6px 30px 6px 6px;
+        width:15px;
+        height:15px;
+    }
+    .div-label {
+        gap: 5px;
     }
 
-    .grafico-tabela, .tabela-dados {
-        flex: 1 1 100%;
+    .div-botao {
         margin: 10px 0;
+        flex-direction: row; /* Botões em linha, mas ajustados */
+        flex-wrap: wrap;
+    }
+
+    form button, #botao-pesquisar {
+        width: 100%; /* Largura total */
+        margin: 5px 0;
+    }
+
+    .div-botao-grafico {
+        text-align: center; /* Centraliza botões do gráfico */
+        margin: 10px;
+         display:flex;
+        flex-direction: row;
+    }
+
+    .div-botao-grafico button {
+        width: 20%; /* Ajusta largura */
+        margin: 5px;
+
+    }
+
+    .grafico-tabela {
+        height: 300px; /* Altura fixa para gráfico */
+    }
+
+    .tabela-dados {
+        overflow-x: auto; /* Scroll horizontal se necessário */
+    }
+
+    .tabela-dados th, .tabela-dados td {
+        padding: 8px 10px; /* Padding menor */
+        font-size: 12px;
     }
 }
 
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
+@media (max-width: 480px) { /* Celulares */
+    main {
+        padding: 10px 10px;
+    }
+
+    .links-navegacao {
+        padding: 10px; /* Padding menor */
     }
 
     h1 {
         font-size: 1.5em;
     }
 
-    img, #conteudo-planta {
-        width: 100%;
+    .conteudo-planta {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+
+    li, #dica, .texto {
+        font-size: 12px;
+    }
+
+    .secao-form form {
+        padding: 10px;
+    }
+
+    .div-label label {
+        font-size: 1rem;
+    }
+
+    .div-botao-grafico button {
+        width: 22%;
+        font-size: 0.8em;
+    }
+
+    .grafico-tabela {
+        height: 250px;
     }
 
     .tabela-dados th, .tabela-dados td {
-        padding: 8px 10px;
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    .tabela-dados {
+        font-size: 0.8em;
     }
 }
-    */
