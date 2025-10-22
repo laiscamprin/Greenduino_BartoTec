@@ -14,7 +14,7 @@ main {
   display: flex;
   gap: 20px;
   list-style: none;
-  padding: 10px;
+  padding: 130px;  
 }
 
 .links-navegacao a {
@@ -106,13 +106,23 @@ font-weight:500;
 .div-conteudo{
     display:flex;
     flex-direction: row;
-
+    gap:20px;
  }
+ /*
+ .caixa-texto-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+*/
+
 .conteudo-planta {
-    grid-row: auto; /* remove posicionamento específico do grid */
+    grid-row: auto;
     grid-column: auto;
     display: flex;
-    flex-direction: column; /* textos um abaixo do outro */
+    flex-direction: column;
     box-shadow: 0 2px 5px #0000001a;
     background-color: #fff;
     padding: 20px;
