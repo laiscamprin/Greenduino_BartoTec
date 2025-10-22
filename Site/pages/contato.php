@@ -6,7 +6,7 @@
   <title>Contato - Greenduino</title>
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/pages/contato.css">
-  <link rel="icon" type="image/x-icon" href="../favicon.png">
+  <link rel="icon" type="image/x-icon" href="../public/favicon.png">
 </head>
 <body>
   <header class="barra-navegacao">
@@ -19,15 +19,22 @@
         <ul class="links-navegacao">
           <li><a href="../public/index.html">Início</a></li>
           <li><a href="../php/estufa.php">Estufa</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="contato.html" class="active">Contato</a></li>
+          <li><a href="sobre.php">Sobre</a></li>
+          <li><a href="contato.php" class="active">Contato</a></li>
         </ul>
       </nav>
-      <div class="botoes-usuario">
-        <a href="login.php" class="botao secundario">Entrar</a>
-        <a href="cadastro.php" class="botao primario">Cadastrar</a>
-      </div>
-    </div>
+      <?php
+      session_start();
+      if(isset($_SESSION['logado'])){ ?>
+             <div class="botoes-usuario">
+                <a href="../php/sair.php" class="botao primario">Sair</a>
+            </div>
+        <?php }else{ ?>
+            <div class="botoes-usuario">
+                <a href="../php/login.php" class="botao secundario">Entrar</a>
+                <a href="../php/cadastro.php" class="botao primario">Cadastrar</a>
+            </div>
+         <?php } ?>
   </header>
 
   <section class="hero-contato">
