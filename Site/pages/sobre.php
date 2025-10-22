@@ -17,16 +17,24 @@
       </div>
       <nav>
         <ul class="links-navegacao">
-          <li><a href="../public/index.html">Início</a></li>
-          <li><a href="../php/estufa.php">Estufa</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="contato.html">Contato</a></li>
+          <li><a href="../public/index.php">Início</a></li>
+          <li><a href="../php/pagina_menu.php">Estufa</a></li>
+          <li><a href="sobre.php">Sobre</a></li>
+          <li><a href="contato.php">Contato</a></li>
         </ul>
       </nav>
-      <div class="botoes-usuario">
-        <a href="login.php" class="botao secundario">Entrar</a>
-        <a href="cadastro.php" class="botao primario">Cadastrar</a>
-      </div>
+           <?php
+      session_start();
+      if(isset($_SESSION['logado'])){ ?>
+             <div class="botoes-usuario">
+                <a href="../php/sair.php" class="botao primario">Sair</a>
+            </div>
+        <?php }else{ ?>
+            <div class="botoes-usuario">
+                <a href="../php/login.php" class="botao secundario">Entrar</a>
+                <a href="../php/cadastro.php" class="botao primario">Cadastrar</a>
+            </div>
+         <?php } ?>
     </div>
   </header>
 
@@ -56,7 +64,7 @@
     <div class="row">
       <article class="col-md-4">
         <div class="card-sobre">
-          <img src="../assets/images/pictures/plantas.jpeg" alt="Nossa História" class="card-img-top">
+          <img src="../assets/images/pictures/grupo.jpeg" alt="Nossa História" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title">Nossa História</h5>
             <p class="card-text">O Greenduino nasceu no início 2025 de uma ideia simples: tornar a agricultura urbana acessível. Começamos com protótipos escolares.</p>
