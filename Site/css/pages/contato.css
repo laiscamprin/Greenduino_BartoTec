@@ -84,13 +84,13 @@
 .offset-md-2 {
   margin-left: 0;
 }
-
+/*
 @media (min-width: 768px) {
   .col-md-6 { flex: 0 0 50%; max-width: 50%; }
   .col-md-8 { flex: 0 0 66.666%; max-width: 66.666%; }
   .offset-md-2 { margin-left: 16.666%; }
 }
-
+*/
 .card-contato {
   background: #fff;
   border-radius: 15px;
@@ -196,16 +196,25 @@ textarea.form-control {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 10px;
 }
-
 @media (max-width: 767px) {
+
+  .hero-contato {
+    padding: 40px 0;
+  }
+
   .hero-contato .row { 
     flex-direction: column; 
     text-align: center; 
-    gap: 30px; 
+    gap: 20px; 
   }
   
   .hero-contato h1 { 
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .lead {
+    margin-bottom: 20px; 
   }
   
   .img-hero { 
@@ -213,18 +222,37 @@ textarea.form-control {
   }
   
   .card-contato { 
-    padding: 30px; 
+    padding: 30px 20px; 
+    
   }
   
   .section-title.orbitron { 
-    font-size: 2rem; 
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .section-subtitle {
+    margin-bottom: 30px; 
   }
   
   .btn-submit { 
     font-size: 1rem; 
   }
   
-  .secao-contato {
-    padding: 60px 0;
+ .secao-contato container{
+  margin:10px;
+ }
+
+  .form-group {
+    margin-bottom: 20px; 
   }
+
+  .alert-sucesso, .alert-erro {
+    margin-top: 15px;
+  }
+
+  .rodape {
+    margin-top: 20px;
+  }
+
 }
