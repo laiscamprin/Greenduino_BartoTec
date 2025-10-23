@@ -162,6 +162,111 @@ a:hover{
   font-size: 14px;
 }
 
+/* ===========================
+   MEDIA QUERIES RESPONSIVAS
+   =========================== */
+
+/* Tablets e telas médias (até 1024px) */
+@media (max-width: 1024px) {
+  .container-login {
+    width: 50%;
+    padding: 35px;
+  }
+
+  .botao-voltar {
+    top: 15px;
+    left: 20px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .botao-voltar img {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* Celulares grandes (até 768px) */
+@media (max-width: 768px) {
+  .container-login {
+    width: 70%;
+    padding: 30px 25px;
+  }
+
+  .input-field {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .btn {
+    width: 70%;
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  #icone {
+    width: 22px;
+    height: 22px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-login {
+    padding: 20px;
+  }
+
+  .container-login {
+    width: 90%;
+    height: auto;
+    padding: 25px 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+
+  .botao-voltar {
+    top: 15px;
+    left: 15px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .botao-voltar img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .input-field {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  #icone {
+    width: 25px;
+    height: 25px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+
 </style>
 
 </head>
@@ -169,7 +274,7 @@ a:hover{
 
 <div class="section-login">
 
-  <a href="../public/index.html." class="botao-voltar">
+  <a href="#" onclick="history.back(); return false;" class="botao-voltar">
     <img src="../assets/images/logos/seta.png" alt="Voltar" />
   </a>
 
