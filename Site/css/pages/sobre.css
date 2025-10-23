@@ -1,4 +1,3 @@
-
 .hero-sobre {
   padding: 80px 0;
 }
@@ -6,7 +5,7 @@
 .hero-sobre .row {
   display: flex;
   align-items: center;
-  gap: 40px;
+ 
 }
 
 .hero-sobre .col-md-6 {
@@ -47,6 +46,10 @@
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+.secao-sobre {
+  margin-bottom: 100px;
+}
+
 .secao-sobre.visible, .secao-equipe.visible {
   opacity: 1;
   transform: translateY(0);
@@ -72,6 +75,7 @@
   flex-wrap: wrap;
   margin: 0 -15px;
 }
+
 
 .col-md-4, .col-md-6 {
   padding: 0 15px;
@@ -217,12 +221,18 @@
 }
 
 @media (max-width: 900px) {
-  .hero-sobre .row {
+  .hero-sobre {
     flex-direction: column;
     text-align: center;
     gap: 30px;
-  }
 
+  }
+.row {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+     padding:0 30px;
+  }
   .hero-sobre h1 {
     font-size: 2.5rem;
   }
@@ -235,16 +245,18 @@
     padding: 60px 0;
   }
 
+  .secao-sobre {
+    margin-bottom: 80px;
+  }
+
   .section-title.orbitron {
     font-size: 2rem;
   }
 
-  .card-img-equipe {
-    width: 60%;
-    height: 200px;
+  .card-img-equipe{
+    border-radius:40%;
   }
-
-  .card-body-equipe {
-    padding: 20px;
+  .card-sobre, .card-equipe {
+    margin-bottom: 30px;
   }
 }
