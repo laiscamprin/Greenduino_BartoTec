@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/pages/menu.css" >
     <link rel="stylesheet" href="../css/main.css" >
     <link rel="stylesheet" href="../assets/fonts.css">
+  <link rel="icon" type="image/x-icon" href="../public/favicon.png">
     <script src="../js/pages/script.js"></script>
     <title>Menu - Dashboard</title>
    
@@ -28,8 +29,8 @@
         <ul class="links-navegacao">
           <li class="anderson"><a href="../public/index.php">Início</a></li>
           <li class="anderson"><a href="pagina_menu.php">Estufa</a></li>
-          <li class="anderson"><a href="sobre.html">Sobre</a></li>
-          <li class="anderson"><a href="contato.html" class="active">Contato</a></li>
+          <li class="anderson"><a href="../pages/sobre.php">Sobre</a></li>
+          <li class="anderson"><a href="../pages/contato.php" class="active">Contato</a></li>
         </ul>
       </nav>
       <div class="botoes-usuario">
@@ -52,7 +53,7 @@ $info = mysqli_query($con, "SELECT nome_arduino, especie_planta, codigo_arduino 
 
 ?>
        <div class="nova-planta">
-              <button class="botao-nova-planta" ><a id="planta" href="../pages/cadastro_planta.html">Adicionar nova planta</a></button>
+              <button class="botao-nova-planta" ><a id="planta" href="#">Adicionar nova planta</a></button>
         </div>
 <?php
 foreach($info as $exibirInfo){
@@ -74,8 +75,8 @@ echo "</div>";
         <ul class="links-navegacao">
           <li class="anderson"><a href="../public/index.php">Início</a></li>
           <li class="anderson"><a href="pagina_menu.php">Estufa</a></li>
-          <li class="anderson"><a href="sobre.html">Sobre</a></li>
-          <li class="anderson"><a href="contato.html" class="active">Contato</a></li>
+          <li class="anderson"><a href="../pages/sobre.php">Sobre</a></li>
+          <li class="anderson"><a href="../pages/contato.php" class="active">Contato</a></li>
         </ul>
       </nav>
       <div class="botoes-usuario">
@@ -86,7 +87,7 @@ echo "</div>";
   </header>
   <main>
       <div class="botao-titulo">
-          <a href="../public/index.html." class="botao-voltar">
+          <a href="#" onclick="history.back(); return false;" class="botao-voltar">
             <img src="../assets/images/logos/seta.png" alt="Voltar" />
           </a>
          <h1> Estufa menu</h1>
@@ -94,7 +95,7 @@ echo "</div>";
   </main>
     <section>
           <div class="adicionar-planta">
-              <button class="botao-adicionar"><img id="mais"src="../assets/images/logos/mais.png"><a href="login.php" id="planta">Adicionar uma planta</a></button>
+              <button class="botao-adicionar"><img id="mais"src="../assets/images/logos/mais.png"><a href="login.php" id="planta"> Adicionar uma planta</a></button>
           </div>
       </section>
   <?php endif; ?>
