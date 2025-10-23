@@ -6,13 +6,17 @@
   text-align: center;
   gap: 20px;
   margin: 10px auto;
-  padding: 40px 0;
+  padding: 40px 20px;
 }
 
+.principal container{
+  padding:20px;
+}
 .principal .logo-hero {
   width: 130px;
   height: auto;
   margin-bottom: 10px;
+  padding-top:20px
 }
 
 .principal .texto h1 {
@@ -45,6 +49,7 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 20px;
+  padding:40px;
 }
 
 .principal .botoes-hero .botaoo {
@@ -231,10 +236,12 @@
   padding-top: 10px;
 }
 
+
 @media (max-width: 900px) {
   .secao-layout {
     flex-direction: column;
     gap: 30px;
+
   }
   
   .direita {
@@ -273,7 +280,7 @@
   }
 
   .principal .botoes-hero {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 }
