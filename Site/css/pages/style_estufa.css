@@ -14,7 +14,7 @@ main {
   display: flex;
   gap: 20px;
   list-style: none;
-  padding: 10px;  
+  padding: 10px;
 }
 
 .links-navegacao a {
@@ -106,23 +106,13 @@ font-weight:500;
 .div-conteudo{
     display:flex;
     flex-direction: row;
-    gap:20px;
- }
- /*
- .caixa-texto-media {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 10px;
-}
-*/
 
+ }
 .conteudo-planta {
-    grid-row: auto;
+    grid-row: auto; /* remove posicionamento específico do grid */
     grid-column: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* textos um abaixo do outro */
     box-shadow: 0 2px 5px #0000001a;
     background-color: #fff;
     padding: 20px;
@@ -311,20 +301,7 @@ th {
     font-weight: 300;
     text-align:center;
 }
-.rodape {
-  background:#3a7f3a;
-  color: #fff;
-  padding: 15px 0 10px;
-}
 
-.rodape .logotipo {
-  color: #fff;
-  font-size: 1.4rem;
-}
-
-.rodape p {
-  color: #ffffffe6;
-}
 @media (max-width: 768px) { /* tablets */
         main {
             padding: 20px 20px; 
@@ -359,8 +336,7 @@ th {
     }
     .div-conteudo {
         flex-direction: column;
-        text-align: left;
-        justify-content: left;
+        text-align: center;
     }
     .caixa-texto-media{
         display:flex;
@@ -368,8 +344,8 @@ th {
     }
 
     .imagem {
-        width: 100px; 
-        height: 120px;
+        width: 80px; 
+        height: 100px;
         margin: 0 auto 10px;
     }
 
@@ -384,7 +360,7 @@ th {
         text-align: left;
     }
     .secao-form form {
-        display: flex; 
+        display: flex; /* Muda de grid para flex vertical */
         flex-direction: column;
         padding: 10px 15px;
     }
@@ -404,71 +380,62 @@ th {
 
     .div-botao {
         margin: 10px 0;
-        flex-direction: row; 
+        flex-direction: row; /* Botões em linha, mas ajustados */
         flex-wrap: wrap;
     }
 
     form button, #botao-pesquisar {
-        width: 100%;
+        width: 100%; /* Largura total */
         margin: 5px 0;
-        text-align: center;
     }
 
     .div-botao-grafico {
-        text-align: center; 
+        text-align: center; /* Centraliza botões do gráfico */
         margin: 10px;
          display:flex;
         flex-direction: row;
     }
 
     .div-botao-grafico button {
-        width: 20%; 
+        width: 20%; /* Ajusta largura */
         margin: 5px;
 
     }
 
     .grafico-tabela {
-        height: 300px; 
+        height: 300px; /* Altura fixa para gráfico */
     }
 
     .tabela-dados {
-        overflow-x: auto; 
+        overflow-x: auto; /* Scroll horizontal se necessário */
     }
 
     .tabela-dados th, .tabela-dados td {
-        padding: 8px 10px;
+        padding: 8px 10px; /* Padding menor */
         font-size: 12px;
     }
 }
 
-@media (max-width: 480px) { 
+@media (max-width: 480px) { /* Celulares */
     main {
         padding: 10px 10px;
     }
 
     .links-navegacao {
-        padding: 10px;
+        padding: 10px; /* Padding menor */
     }
 
     h1 {
         font-size: 1.5em;
     }
-    .imagem img{
-        width: 100px;
-        height:80px;
-    }
-    .div-img-titulo{
-        text-align: center;
-    }
+
     .conteudo-planta {
         padding: 15px;
         font-size: 0.9em;
-        display:flex;
-        justify-content: center;
     }
 
     li, #dica, .texto {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .secao-form form {
