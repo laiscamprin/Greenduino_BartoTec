@@ -161,12 +161,7 @@ a:hover{
   margin-bottom: 15px;
   font-size: 14px;
 }
-
-/* ===========================
-   MEDIA QUERIES RESPONSIVAS
-   =========================== */
-
-/* Tablets e telas médias (até 1024px) */
+    
 @media (max-width: 1024px) {
   .container-login {
     width: 50%;
@@ -186,7 +181,6 @@ a:hover{
   }
 }
 
-/* Celulares grandes (até 768px) */
 @media (max-width: 768px) {
   .container-login {
     width: 70%;
@@ -214,7 +208,6 @@ a:hover{
   }
 }
 
-/* Celulares pequenos (até 480px) */
 @media (max-width: 480px) {
   body {
     flex-direction: column;
@@ -300,4 +293,5 @@ a:hover{
   </div>
 </body>
 </html>
+
 
