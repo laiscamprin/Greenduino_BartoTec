@@ -20,12 +20,14 @@ if (isset($_POST['cadastrar'])) {
         $sql = "INSERT INTO usuarios (nome, email, senha, telefone, cpf)
                 VALUES ('$nome', '$email', '$senha_hash', '$telefone', '$cpf')";
         if (mysqli_query($con, $sql)) {
-            $msg = "✅ Cadastro realizado com sucesso! <a href='login.php'>Fazer login</a>";
+            header('Location: login.php');
         } else {
             $msg = "Erro ao cadastrar: " . mysqli_error($con);
         }
     }
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -199,6 +201,120 @@ a:hover {
 }
 
 
+@media (max-width: 1024px) {
+  .container-login {
+    width: 60%;
+    padding: 35px;
+  }
+
+  a.botao-voltar {
+    top: 25px;
+    left: 25px;
+    width: 35px;
+    height: 35px;
+  }
+
+  a.botao-voltar img {
+    width: 38px;
+    height: 38px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container-login {
+    width: 80%;
+    height: auto;
+    padding: 30px 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .input-field {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .btn {
+    width: 80%;
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .icones-login {
+    flex-wrap: wrap;
+  }
+
+  #icone {
+    width: 22px;
+    height: 22px;
+    margin: 8px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-login {
+    padding: 20px;
+  }
+
+  .container-login {
+    width: 90%;
+    height: auto;
+    padding: 25px 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  a.botao-voltar {
+    top: 15px;
+    left: 15px;
+    width: 32px;
+    height: 32px;
+  }
+
+  a.botao-voltar img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .input-field {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  #icone {
+    width: 25px;
+    height: 25px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .login p {
+    font-size: 0.9rem;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -208,7 +324,7 @@ a:hover {
    
     <div class="container-login">
       <h2>Cadastro</h2>
-       <a href="../public/index.html" class="botao-voltar" onclick="console.log('Botão clicado!');">
+       <a href="#" onclick="history.back(); return false;" class="botao-voltar">
          <img src="../assets/images/logos/seta.png" alt="Voltar" />
         </a>
   
