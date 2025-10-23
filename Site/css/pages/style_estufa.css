@@ -14,7 +14,7 @@ main {
   display: flex;
   gap: 20px;
   list-style: none;
-  padding: 130px;  
+  padding: 10px;  
 }
 
 .links-navegacao a {
@@ -311,7 +311,20 @@ th {
     font-weight: 300;
     text-align:center;
 }
+.rodape {
+  background:#3a7f3a;
+  color: #fff;
+  padding: 15px 0 10px;
+}
 
+.rodape .logotipo {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.rodape p {
+  color: #ffffffe6;
+}
 @media (max-width: 768px) { /* tablets */
         main {
             padding: 20px 20px; 
@@ -346,7 +359,8 @@ th {
     }
     .div-conteudo {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
+        justify-content: left;
     }
     .caixa-texto-media{
         display:flex;
@@ -354,8 +368,8 @@ th {
     }
 
     .imagem {
-        width: 80px; 
-        height: 100px;
+        width: 100px; 
+        height: 120px;
         margin: 0 auto 10px;
     }
 
@@ -370,7 +384,7 @@ th {
         text-align: left;
     }
     .secao-form form {
-        display: flex; /* Muda de grid para flex vertical */
+        display: flex; 
         flex-direction: column;
         padding: 10px 15px;
     }
@@ -390,62 +404,71 @@ th {
 
     .div-botao {
         margin: 10px 0;
-        flex-direction: row; /* Botões em linha, mas ajustados */
+        flex-direction: row; 
         flex-wrap: wrap;
     }
 
     form button, #botao-pesquisar {
-        width: 100%; /* Largura total */
+        width: 100%;
         margin: 5px 0;
+        text-align: center;
     }
 
     .div-botao-grafico {
-        text-align: center; /* Centraliza botões do gráfico */
+        text-align: center; 
         margin: 10px;
          display:flex;
         flex-direction: row;
     }
 
     .div-botao-grafico button {
-        width: 20%; /* Ajusta largura */
+        width: 20%; 
         margin: 5px;
 
     }
 
     .grafico-tabela {
-        height: 300px; /* Altura fixa para gráfico */
+        height: 300px; 
     }
 
     .tabela-dados {
-        overflow-x: auto; /* Scroll horizontal se necessário */
+        overflow-x: auto; 
     }
 
     .tabela-dados th, .tabela-dados td {
-        padding: 8px 10px; /* Padding menor */
+        padding: 8px 10px;
         font-size: 12px;
     }
 }
 
-@media (max-width: 480px) { /* Celulares */
+@media (max-width: 480px) { 
     main {
         padding: 10px 10px;
     }
 
     .links-navegacao {
-        padding: 10px; /* Padding menor */
+        padding: 10px;
     }
 
     h1 {
         font-size: 1.5em;
     }
-
+    .imagem img{
+        width: 100px;
+        height:80px;
+    }
+    .div-img-titulo{
+        text-align: center;
+    }
     .conteudo-planta {
         padding: 15px;
         font-size: 0.9em;
+        display:flex;
+        justify-content: center;
     }
 
     li, #dica, .texto {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .secao-form form {
