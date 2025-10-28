@@ -9,10 +9,9 @@ if (isset($_POST['cadastrar'])) {
     $telefone = $_POST['telefone'];
     $cpf = $_POST['cpf'];
 
-    // Criptografar a senha
+    
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
-    // Verificar se o e-mail já existe
     $check = mysqli_query($con, "SELECT * FROM usuarios WHERE email='$email'");
     if (mysqli_num_rows($check) > 0) {
         $msg = "❌ Este e-mail já está cadastrado.";
@@ -39,7 +38,7 @@ if (isset($_POST['cadastrar'])) {
 <link rel="icon" type="image/x-icon" href="../public/favicon.png">
 <title>Cadastro</title>
 <style>
-/* Reset e base */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -83,7 +82,7 @@ a.botao-voltar {
   justify-content: center;
   align-items: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  text-decoration: none; /* Remove sublinhado padrão do link */
+  text-decoration: none; 
 }
 
 a.botao-voltar img {
@@ -123,7 +122,7 @@ a.botao-voltar:hover img {
   font-family: "Quicksand", sans-serif;
 }
 
-/* Botões */
+
 .btn {
   width: 50%;
   padding: 12px;
@@ -141,7 +140,7 @@ a.botao-voltar:hover img {
   background: #3c7d22;
 }
 
-/* Ícones */
+
 .icones-login {
   display: flex;
   flex-direction: row;
@@ -162,14 +161,14 @@ a.botao-voltar:hover img {
   opacity: 0.8;
 }
 
-/* Mensagens */
+
 .message {
   color: red;
   margin-bottom: 15px;
   font-size: 14px;
 }
 
-/* Links */
+
 a {
   color: #00421f;
 
