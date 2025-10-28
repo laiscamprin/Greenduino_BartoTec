@@ -1,4 +1,6 @@
 # Greenduino_BartoTec
+Integrantes: Laís Camprincoli, Beatriz Mota e Francisco Justo
+
 O GreenDuino é um projeto que une educação, sustentabilidade e tecnologia, criado com o objetivo de tornar a agricultura mais inteligente, acessível e sustentável. Desenvolvido por estudantes da Escola Técnica, o projeto teve início com uma prototipação e evoluiu para uma solução completa, com estufa automatizada, monitoramento via sensores* e plataforma web interativa. 
 
  
