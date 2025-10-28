@@ -1,31 +1,31 @@
--- banco não oficial, banco para teste online 
-CREATE DATABASE greenduino_db;
-USE greenduino_db;
+create database greenduino_db;
+use greenduino_db;
 
-CREATE TABLE  registros (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    data DATE NOT NULL,
-    hora TIME NOT NULL,
-    temperatura FLOAT,
-    umidade_ar FLOAT,
-    umidade_solo FLOAT,
-    irrigacao TINYINT(1)
+create table registros(
+id_registros int not null auto_increment primary key,
+data date,
+hora time, 
+temperatura DECIMAL(5,2),
+umidade_ar decimal(5,2),
+umidade_solo decimal(5,2),
+irrigacao VARCHAR(10)
+);
+
+CREATE TABLE arduino (
+id_arduino INT not null AUTO_INCREMENT PRIMARY KEY,
+codigo_arduino VARCHAR(50) NOT NULL UNIQUE,    
+nome_arduino VARCHAR(150) NOT NULL,
+especie_planta VARCHAR(150) NOT NULL
 );
 CREATE TABLE usuarios (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  nome VARCHAR(100),
-  email VARCHAR(100) UNIQUE,
-  senha VARCHAR(270),
+  nome VARCHAR(255),
+  email VARCHAR(255),
+  senha VARCHAR(255),
   telefone VARCHAR(20),
   cpf VARCHAR(20)
-);
-INSERT INTO registros (data, hora, temperatura, umidade_ar, umidade_solo, irrigacao)
-VALUES 
-('2025-10-01', '08:00:00', 22.5, 60.0, 35.0, 0),
-('2025-10-01', '12:00:00', 28.3, 55.0, 30.0, 1),
-('2025-10-01', '16:00:00', 27.1, 50.0, 28.0, 1),
-('2025-10-02', '08:00:00', 21.9, 65.0, 40.0, 0),
-('2025-10-02', '12:00:00', 29.0, 52.0, 29.0, 1),
-('2025-10-02', '16:00:00', 26.5, 48.0, 27.0, 1),
-('2025-10-03', '08:00:00', 23.0, 70.0, 42.0, 0),
-('2025-10-03', '12:00:00', 30.1, 50.0, 25.0, 1);
+  );
+  
+select*from usuarios;
+insert into arduino(codigo_arduino,nome_arduino, especie_planta) values("16309_G","Estufa originária","alface");
+
