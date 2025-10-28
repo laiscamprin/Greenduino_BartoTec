@@ -73,12 +73,12 @@ font-weight:500;
 }
 .div-conteudo-info-form-grafico {
     display: flex;
-    flex-direction: column; /* empilha tudo verticalmente */
-    gap: 22px; /* espaço entre as divs */
+    flex-direction: column; 
+    gap: 22px; 
 }
 
 .secao-form {
-    grid-row: 1;     /* Linha superior */
+    grid-row: 1;  
     grid-column: 2;
 }
 
@@ -109,10 +109,10 @@ font-weight:500;
 
  }
 .conteudo-planta {
-    grid-row: auto; /* remove posicionamento específico do grid */
+    grid-row: auto;
     grid-column: auto;
     display: flex;
-    flex-direction: column; /* textos um abaixo do outro */
+    flex-direction: column; 
     box-shadow: 0 2px 5px #0000001a;
     background-color: #fff;
     padding: 20px;
@@ -126,7 +126,7 @@ font-weight:500;
     margin-left: 20px;
 }
 
-/* Estilo para o formulário e botões */
+
 form {
     background-color: #fff;
     padding: 20px;
@@ -302,7 +302,7 @@ th {
     text-align:center;
 }
 
-@media (max-width: 768px) { /* tablets */
+@media (max-width: 768px) {
         main {
             padding: 20px 20px; 
         }
@@ -360,7 +360,7 @@ th {
         text-align: left;
     }
     .secao-form form {
-        display: flex; /* Muda de grid para flex vertical */
+        display: flex; 
         flex-direction: column;
         padding: 10px 15px;
     }
@@ -380,49 +380,49 @@ th {
 
     .div-botao {
         margin: 10px 0;
-        flex-direction: row; /* Botões em linha, mas ajustados */
+        flex-direction: row; 
         flex-wrap: wrap;
     }
 
     form button, #botao-pesquisar {
-        width: 100%; /* Largura total */
+        width: 100%; 
         margin: 5px 0;
     }
 
     .div-botao-grafico {
-        text-align: center; /* Centraliza botões do gráfico */
+        text-align: center; 
         margin: 10px;
          display:flex;
         flex-direction: row;
     }
 
     .div-botao-grafico button {
-        width: 20%; /* Ajusta largura */
+        width: 20%; 
         margin: 5px;
 
     }
 
     .grafico-tabela {
-        height: 300px; /* Altura fixa para gráfico */
+        height: 300px; 
     }
 
     .tabela-dados {
-        overflow-x: auto; /* Scroll horizontal se necessário */
+        overflow-x: auto;
     }
 
     .tabela-dados th, .tabela-dados td {
-        padding: 8px 10px; /* Padding menor */
+        padding: 8px 10px;
         font-size: 12px;
     }
 }
 
-@media (max-width: 480px) { /* Celulares */
+@media (max-width: 480px) {
     main {
         padding: 10px 10px;
     }
 
     .links-navegacao {
-        padding: 10px; /* Padding menor */
+        padding: 10px; 
     }
 
     h1 {
