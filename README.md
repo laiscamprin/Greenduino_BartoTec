@@ -131,8 +131,6 @@ Futuras Melhorias:
 
 Projeto desenvolvido por estudantes do curso Técnico em Informática para Internet, com apoio de professores da Escola Técnica e mentores da área de tecnologia e sustentabilidade. 
 
-Este projeto é de código aberto e pode ser utilizado para fins educacionais e de pesquisa.   
 
-Sinta-se à vontade para contribuir, melhorar e adaptar o GreenDuino. 
 
  
